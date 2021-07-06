@@ -37,10 +37,6 @@ export function addMatrices(A: number[][], B: number[][]) {
     return C
 }
 
-const [A, B] = [randMat(2, 3), randMat()];
-
-console.log({ A, B })
-
 export function transpose(A: number[][]) {
     const [rows, cols] = dim(A);
     const AT: number[][] = [];
@@ -54,8 +50,6 @@ export function transpose(A: number[][]) {
     return AT
 }
 
-console.log(transpose(A))
-
 export const scalarMult = (k: number, A: number[][]) => A.map(row => row.map(element => element * k))
 
 export const dot = (v: number[], q: number[]) => {
@@ -65,5 +59,3 @@ export const dot = (v: number[], q: number[]) => {
 
     return sum(v.map((el, i) => el * q[i]))
 }
-
-console.log(dot([1, 2, 3], [1, 2, 3]))
